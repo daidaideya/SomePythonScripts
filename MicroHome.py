@@ -1,20 +1,19 @@
 ﻿# -*- coding:utf-8 -*-
-# 微嘉园
-
 import requests
 import time
 import random
 import logging
 import os
 """
+cron: 10 13 * * *
+new Env('微嘉园');
+
 阅读、点赞、视频
 青龙变量:MicroCk
 
 用#号隔开账号
 用&隔开openid与token
 格式: openid1&token1#openid2&token2
-
-cron: 10 13 * * *
 """
 
 logger = logging.getLogger(name=None)  # 创建一个日志对象
