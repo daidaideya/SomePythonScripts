@@ -37,7 +37,7 @@ headers = {"Host": "www.ttljf.com", "Connection": "keep-alive",
            "Referer": "https://servicewechat.com/wxe9aa8f1c4a77ddf5/21/page-frame.html"}
 
 
-def login(usernameVal, passwordVal, indexVal):
+def login(usernameVal, passwordVal):
     body = {"mthd": "login", "platform": "wx_mini", "userName": usernameVal, "password": passwordVal}
     loginRes = requests.post(url='https://www.ttljf.com/ttl_chefHub/login/restaurant', headers=headers, json=body)
     token = loginRes.json()['data']['token']
@@ -45,7 +45,7 @@ def login(usernameVal, passwordVal, indexVal):
 
 
 def main(tkVal, usernameVal):
-    logger.info(f"\n正在运行太太乐第{indexVal}个号\n用户名为:{usernameVal}")
+    logger.info(f"\n正在运行太太乐第{index}个号\n用户名为:{usernameVal}")
 
     headers["token"] = tkVal
     # share
@@ -75,5 +75,5 @@ if __name__ == '__main__':
         user = user.split("&")
         username = user[0]
         password = user[1]
-        tk = login(username, password, index)
+        tk = login(username, password)
         main(tk, username)
