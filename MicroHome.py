@@ -7,7 +7,7 @@ import os
 """
 cron: 10 13 * * *
 new Env('微嘉园');
-
+已失效
 阅读、点赞、视频
 青龙变量:MicroCk
 
