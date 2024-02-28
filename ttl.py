@@ -6,7 +6,7 @@ import logging
 
 """
 new Env('太太乐餐饮服务');
-cron: 5 10,20 * * *
+cron: 5 10,12,14,16,18 * * *
 
 青龙变量:ttl_count
 
